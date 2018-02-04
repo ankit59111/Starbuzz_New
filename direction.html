@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1.0">
+  <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+  </head>
+    <style>
+       #map {
+        height: 700px;
+        width: 100%;
+       }
+    </style>
+  </head>
+  <body>
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+	 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+     
+      <a class="navbar-brand" href="starbuzzcoffee.html">STARBUZZ COFFEE</a>
+    </div>
+	<div class="collapse navbar-collapse" id="myNavbar">
+    <ul class="nav navbar-nav">
+      <li><a href="starbuzzcoffee.html">HOME</a></li>        
+     <li><a href="Blog.html">BLOG</a></li>        
+     <li><a href="starbuzzcoffee.html">INVENTIONS</a></li>        
+     <li><a href="starbuzzcoffee.html">RECIPES</a></li>       
+     <li class="active"><a href="direction.html">LOCATIONS</a></li>  
+
+    </ul>
+  </div>
+  </div>
+</nav>
+	
+    <div id="map"></div>
+    <script>
+      function initMap() {
+        var uluru = {lat: 28.634287, lng: 77.431008};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 4,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+      }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA_qtF7yn_dc3BlpmGr4Ev-qE64LQo0kpo&callback=initMap">
+    </script>
+  </body>
+</html>
